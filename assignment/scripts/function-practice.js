@@ -19,7 +19,7 @@ function helloName() {
   return `Hello, ${firstName}!`;
 }
 // Remember to call the function to test
-console.log('Test - should say "Hello, Jake!"', helloName()); // DONE
+console.log('Should say "Hello, Jake!"', helloName()); // DONE
 
 // 3. Function to add two numbers together & return the result
 let firstNumber = 5;
@@ -29,7 +29,7 @@ function addNumbers() {
   return firstNumber + secondNumber;
 }
 
-console.log('Test - should return the number 7', addNumbers()); // DONE
+console.log('Should return the number 7', addNumbers()); // DONE
 
 // 4. Function to multiply three numbers & return the result
 firstNumber = 5;
@@ -40,7 +40,7 @@ function multiplyThree() {
   return firstNumber * secondNumber * thirdNumber;
 }
 
-console.log('Test - should return the number 500', multiplyThree()); // DONE
+console.log('Should return the number 500', multiplyThree()); // DONE
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
@@ -57,7 +57,7 @@ function isPositive(number) {
 console.log('isPositive - should say true', isPositive(3));
 console.log('isPositive - should say false', isPositive(0));
 console.log('isPositive - should say false', isPositive(-3));
-console.log('isPositive - should say false', isPositive(45)); // DONE
+console.log('isPositive - should say true', isPositive(45)); // DONE
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
@@ -147,6 +147,23 @@ console.log(
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+
+let inputArray = [-7, -43, 0, 8, 983, -21, 94];
+
+function getPositivesInNewArray(array) {
+  let newArray;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > 0) {
+      newArray = array.filter((num) => num > 0);
+    }
+  }
+  return newArray;
+}
+
+console.log(
+  'the positive numbers put into the new array are ',
+  getPositivesInNewArray(inputArray)
+); // DONE
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
