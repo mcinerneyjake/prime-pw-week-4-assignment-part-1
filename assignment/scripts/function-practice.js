@@ -61,7 +61,7 @@ console.log('isPositive - should say false', isPositive(45)); // DONE
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-let foodArray = ['apples', 'pears', 'oranges', 'pizza'];
+let foodArray = ['apples', 'pears', 'oranges', 'pizza', 1];
 
 function getLast(array) {
   if (array[array.length - 1]) {
@@ -87,7 +87,7 @@ function find(value, array) {
   return check;
 }
 
-console.log(find('apples', foodArray)); // DONE
+console.log(find('oranges', foodArray)); // DONE
 
 // THE FOLLOWING FUNCTION WAS A TEST OF THE SAME LOGIC USING A "FOR OF" LOOP INSTEAD. SPECIAL THANKS TO JACK LUND WITH THE ASSIST!
 
@@ -112,6 +112,7 @@ console.log(find('apples', foodArray)); // DONE
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {}
+
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
