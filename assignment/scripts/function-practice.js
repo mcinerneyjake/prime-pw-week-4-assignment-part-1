@@ -64,19 +64,47 @@ console.log('isPositive - should say false', isPositive(45)); // DONE
 let foodArray = ['apples', 'pears', 'oranges', 'pizza'];
 
 function getLast(array) {
-  if (foodArray[foodArray.length - 1]) {
-    return foodArray.slice(-1)[0];
+  if (array[array.length - 1]) {
+    return array.slice(-1)[0];
   } else {
     return undefined;
   }
 }
 
-console.log(getLast()); // DONE
+console.log('This should return the string "pizza"', getLast(foodArray)); // DONE
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find(value, array) {}
+
+function find(value, array) {
+  let check = false;
+  for (let i = 0; i < array.length; i++) {
+    if (value === array[i]) {
+      check = true;
+    }
+  }
+  return check;
+}
+
+console.log(find('apples', foodArray)); // DONE
+
+// THE FOLLOWING FUNCTION WAS A TEST OF THE SAME LOGIC USING A "FOR OF" LOOP INSTEAD. SPECIAL THANKS TO JACK LUND WITH THE ASSIST!
+
+// function find(value, array) {
+//   let check = false;
+//   for (index of array) {
+//     if (index === value) {
+//       check = true;
+//       if (check === true) {
+//         break;
+//       }
+//     }
+//   }
+//   return check;
+// }
+
+// console.log(find('pizza', foodArray));
 
 // ----------------------
 // Stretch Goals
