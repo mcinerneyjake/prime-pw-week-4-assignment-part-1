@@ -111,10 +111,20 @@ console.log(find('oranges', foodArray)); // DONE
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {}
+
+function isFirstLetter(letter, string) {
+  let check = false;
+  for (let i = 0; i < string.length; i++) {
+    if (letter === string[0]) {
+      check = true;
+    }
+  }
+  return check;
+}
 
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
+console.log('isFirstLetter - should say true', isFirstLetter('z', 'zebra')); // DONE
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll() {
