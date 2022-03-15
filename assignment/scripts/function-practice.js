@@ -29,15 +29,12 @@ function addNumbers(firstNumber, secondNumber) {
 console.log('Should return the number 7', addNumbers(5, 2)); // DONE
 
 // 4. Function to multiply three numbers & return the result
-firstNumber = 5;
-secondNumber = 20;
-let thirdNumber = 5;
 
-function multiplyThree() {
+function multiplyThree(firstNumber, secondNumber, thirdNumber) {
   return firstNumber * secondNumber * thirdNumber;
 }
 
-console.log('Should return the number 500', multiplyThree()); // DONE
+console.log('Should return the number 500', multiplyThree(5, 10, 10)); // DONE
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
