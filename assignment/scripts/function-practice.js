@@ -168,3 +168,21 @@ console.log(
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+// This function attempts to multiply two variables together.
+
+// Original function:
+// function multiply(a, b) {
+//   a * b;
+// }
+
+let a = 2;
+let b = 100;
+
+function multiply(a, b) {
+  return a * b;
+}
+
+console.log(multiply(a, b));
+// The function was missing a return a * b statement within its scope. If there is no return statement, 'undefined' is logged onto the console.
+// DONE
