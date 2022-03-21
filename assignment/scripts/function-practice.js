@@ -58,12 +58,17 @@ console.log('isPositive - should say true', isPositive(45)); // DONE
 let foodArray = ['apples', 'pears', 'oranges', 'pizza'];
 
 function getLast(array) {
-  if (array[array.length - 1]) {
-    return array.slice(-1)[0];
-  } else {
-    return undefined;
-  }
+  return array[array.length - 1];
 }
+
+// THIS WAS MY ORIGINAL getLast() FUNCTION. MATT HELPED ME SIMPLIFY IT INTO THE FUNCTION ABOVE.
+// function getLast(array) {
+//   if (array[array.length - 1]) {
+//     return array.slice(-1)[0];
+//   } else {
+//     return undefined;
+//   }
+// }
 
 console.log('This should return the string "pizza"', getLast(foodArray)); // DONE
 
@@ -72,14 +77,23 @@ console.log('This should return the string "pizza"', getLast(foodArray)); // DON
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 
 function find(value, array) {
-  let check = false;
   for (let i = 0; i < array.length; i++) {
     if (value === array[i]) {
-      check = true;
+      return true;
     }
   }
-  return check;
+  return false;
 }
+// THIS WAS MY ORIGINAL FUNCTION, BUT MATT HELPED ME SIMPLIFY IT ABOVE.
+// function find(value, array) {
+//   let check = false;
+//   for (let i = 0; i < array.length; i++) {
+//     if (value === array[i]) {
+//       return check = true;
+//     }
+//   }
+//   return check;
+// }
 
 console.log('find() should be true', find('oranges', foodArray)); // DONE
 
